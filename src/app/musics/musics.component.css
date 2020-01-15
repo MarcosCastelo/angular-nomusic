@@ -1,0 +1,40 @@
+.row{
+    margin-bottom: 0.8em;
+}
+
+.music-title {
+    text-align: left;
+    margin-left: 1.2em;
+    margin-top: 0.8em;
+}
+
+.col-xl-11 {
+    background-color: #f0f0f0;
+}
+
+.col-xl-11:hover {
+    background-color: #d3d3d3;
+}
+
+.list-musics{
+    margin: 0.8em;
+}
+
+.index { 
+    margin-right: 1em;
+    font-style: bold;
+    font-size: large
+}
+
+.music-box {
+    margin-top: 3em;
+    margin-bottom: 8em;
+}
+
+.textbox {
+    margin: 0.8em;
+}
+
+.form {
+    margin-top: 2em;
+}

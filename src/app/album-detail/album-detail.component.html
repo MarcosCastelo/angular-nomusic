@@ -1,0 +1,50 @@
+<div *ngIf="album" class="container album-box">
+    <div class="full-width">
+      <h2>{{album.title | uppercase}} Details</h2>
+    </div>
+  
+    <div class="details">
+      <div class="form-group">
+        <div class="textbox">
+            <label>Album Title</label>
+            <input [(ngModel)]="album.title"  class="form-control"  type="text" placeholder="Title">
+        </div>
+        <div class="textbox">
+            <label>Album Genre</label>
+            <input [(ngModel)]="album.genre" class="form-control"  type="text" placeholder="Genre">
+        </div>
+        <div class="textbox">
+            <label>Album Year</label>
+            <input [(ngModel)]="album.year" class="form-control" type="text" placeholder="Year">
+        </div>
+        <div class="textbox">
+            <label>Album's Artist</label>
+            <input [(ngModel)]="album.artist" class="form-control" type="text" placeholder="Artist">
+        </div>
+      </div>
+    </div>
+
+    <div class="container musics-list">
+        <h3 class="albums-text">All Musics</h3>
+        <ul class="musics">
+          <li *ngFor="let music of album.musics"  class="row">
+            <a  class="col-xl-11 list-group-item-action" routerLink="/musics/{{music.pk}}">
+              <h6 class="music-title">{{ music.title }}</h6>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <button class="btn btn-primary" (click)="updateAlbum()">Save</button>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+          <button class="btn btn-primary" (click)="goBack()">Back</button>
+          </li>
+        </ul>
+      </div>
+
+  </div>

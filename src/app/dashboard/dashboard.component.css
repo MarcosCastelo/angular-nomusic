@@ -1,0 +1,33 @@
+.block{
+    margin: 4em;
+}
+
+.nav-item{
+    margin: 0.1em;
+}
+
+.nav-link {
+    border-radius: 0;
+    background-color: #373742;
+    text-align: left;
+    height: 3em;
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #34343d;
+    color: #c5c2c2;
+}
+
+.index {
+    text-align: left;
+    margin-right: 2em;
+}
+
+.title{
+    margin-top: 0.4em;
+}
+
+
+
+

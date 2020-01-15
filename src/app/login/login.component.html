@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Login</h1>
+
+  <div class="textbox">
+    <label>Username</label>
+    <input #username class="form-control"  type="text" placeholder="Enter the username">
+  </div>
+
+  <div class="textbox">
+    <label>Password</label>
+    <input #password class="form-control"  type="password" placeholder="Enter the password">
+  </div>
+  
+  <button class="btn btn-primary" (click)="login(username.value, password.value)">login</button>
+</div>

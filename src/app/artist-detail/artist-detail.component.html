@@ -1,0 +1,34 @@
+<div *ngIf="artist" class="container artist-box">
+  <h2>{{artist.name | uppercase}} Detail</h2> 
+  <div class="form-group">
+    <label for="artistName">Artist Name</label>
+    <input type="text" [(ngModel)]="artist.name" class="form-control" id="artistName" placeholder="Enter the artist name">
+  </div>
+
+  <div class="form-group">
+    <label>Artist Debut Year</label>
+    <input type="text" [(ngModel)]="artist.debut_year" class="form-control" placeholder="Enter the artist debut year">
+  </div>
+  <div class="container albums-list">
+    <h3 class="albums-text">All Albums</h3>
+    <ul class="albums">
+      <li *ngFor="let album of artist.albums"  class="row">
+        <a  class="col-xl-11 list-group-item-action" routerLink="/albums/{{album.pk}}">
+          <h6 class="artist-title">{{ album.title }}</h6>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="menu navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button class="btn btn-primary" (click)="updateArtist()">Save</button>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+      <button class="btn btn-primary" (click)="goBack()">Back</button>
+      </li>
+    </ul>
+  </div>
+</div>

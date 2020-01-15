@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>All Artists</h2>
+    <div class="list-artists">
+        <ul class="artists">
+            <li *ngFor="let artist of artists" class="row">
+                <a class="col-xl-11 list-group-item-action" routerLink="/artists/{{artist.pk}}">
+                    <h6 class="artist-title"><span class="index"> {{ getIndex(artist) }} </span> {{ artist.name }}</h6>
+                </a>
+                <button class="col-xm-1 delete btn btn-danger" title="delete artist" (click)="deleteArtist(artist)">
+                    <i class="material-icons">delete_forever</i>
+                </button>  
+            </li>
+        </ul>
+    </div>
+</div>

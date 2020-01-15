@@ -1,0 +1,20 @@
+<div class="block">
+    <h2>Top Musics</h2>
+    <ul class="nav nav-pills nav-justified">
+        <li *ngFor="let music of musics" class="nav-item">
+            <a class="nav-link" routerLink="/musics/{{music.pk}}">
+                <h6 class="title"><span class="index"> {{ getMusicIndex(music) }} </span> {{ music.title }}</h6>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="block">
+    <h2>Top Artists</h2>
+    <ul class="nav nav-pills nav-justified">
+        <li *ngFor="let artist of artists" class="nav-item">
+            <a class="nav-link" routerLink="/artists/{{artist.pk}}">
+                <h6 class="title"><span class="index"> {{ getArtistIndex(artist) }} </span> {{ artist.name }}</h6>
+            </a>
+        </li>
+    </ul>
+</div>

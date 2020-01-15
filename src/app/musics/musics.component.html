@@ -1,0 +1,52 @@
+<div class="container">
+<h2>All Musics</h2>
+<div class="list-musics">
+    <ul class="musics">
+        <li *ngFor="let music of musics" class="row">
+            <a class="col-xl-11 list-group-item-action" routerLink="/musics/{{music.pk}}">
+                <h6 class="music-title"><span class="index"> {{ getIndex(music) }} </span> {{ music.title }}</h6>
+            </a>
+            <div *ngIf="isLogged()">
+            <button class="col-xm-1 delete btn btn-danger" title="delete music" (click)="deleteMusic(music)">
+                <i class="material-icons">delete_forever</i>
+            </button>  
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="container music-box">
+    <h3>Add a Music</h3>
+    <form class="form">
+        <div class="form-group">
+            <label for="musicTitle">Music Title</label>
+            <input type="text" class="form-control" id="musicTitle" #musicTitle placeholder="Enter the music title">
+        </div>
+
+        <div class="form-group">
+            <label for="musicLength">Music Length</label>
+            <input type="text" class="form-control" id="musicLength" #musicLength placeholder="Enter the music length">
+        </div>
+
+        <div class="form-group">
+            <label for="musicAlbum">Album</label>
+            <input type="text" class="form-control" id="musicAlbum" #musicAlbum placeholder="Enter the music album">
+        </div>
+
+        <div class="form-group">
+            <label for="musicArtist">Artist</label>
+            <input type="text" class="form-control" id="musicArtist" #musicArtist placeholder="Enter the music artist">
+        </div>
+
+        <input type="button" class="btn btn-primary" value="Add Music" 
+             (click)="addMusic(
+                        musicTitle.value,
+                        musicLength.value,
+                        musicAlbum.value, 
+                        musicArtist.value
+                      );
+                      musicTitle.value='';
+                      musicLength.value='';
+                      musicAlbum.value='';
+                      musicArtist.value='';">
+    </form>
+</div>

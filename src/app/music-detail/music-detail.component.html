@@ -1,0 +1,39 @@
+<div *ngIf="music" class="container music-box">
+  <div class="full-width">
+    <h2>{{music.title | uppercase}} Details</h2>
+  </div>
+
+  <div class="details">
+    <div class="form-group">
+      <div class="textbox">
+          <label>Music Title</label>
+          <input [(ngModel)]="music.title"  class="form-control"  type="text" placeholder="Title">
+      </div>
+      <div class="textbox">
+          <label>Music Length</label>
+          <input [(ngModel)]="music.length" class="form-control"  type="text" placeholder="Genre">
+      </div>
+      <div class="textbox">
+          <label>Music Album</label>
+          <input [(ngModel)]="music.album" class="form-control" type="text" placeholder="Year">
+      </div>
+      <div class="textbox">
+          <label>Music Artist</label>
+          <input [(ngModel)]="music.artist" class="form-control" type="text" placeholder="Artist">
+      </div>
+    </div>
+  </div>
+    <div class="menu navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <button class="btn btn-primary" (click)="updateMusic()">Save</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+        <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </li>
+      </ul>
+    </div>
+
+</div>

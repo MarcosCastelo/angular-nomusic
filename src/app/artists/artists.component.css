@@ -1,0 +1,27 @@
+.row{
+    margin-bottom: 0.8em;
+}
+
+.artist-title {
+    text-align: left;
+    margin-left: 1.2em;
+    margin-top: 0.8em;
+}
+
+.col-xl-11 {
+    background-color: #f0f0f0;
+}
+
+.col-xl-11:hover {
+    background-color: #d3d3d3;
+}
+
+.list-artists{
+    margin: 0.8em;
+}
+
+.index { 
+    margin-right: 1em;
+    font-style: bold;
+    font-size: large
+}

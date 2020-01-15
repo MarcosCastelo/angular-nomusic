@@ -1,0 +1,53 @@
+.album-box {
+    margin-bottom: 3em;
+}
+
+.musics-text{
+    padding-left: 0.6em;
+}
+
+.musics-list{
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    border-radius: 15px;
+    padding: 0.8em;
+}
+
+.musics{
+    margin-top: 1em;
+}
+
+
+.row{
+    margin-bottom: 0.8em;
+}
+
+.music-title {
+    text-align: left;
+    margin-left: 1.2em;
+    margin-top: 0.8em;
+}
+
+.col-xl-11 {
+    background-color: #f0f0f0;
+    padding: 0.2em;
+}
+
+.col-xl-11:hover {
+    background-color: #d3d3d3;
+    
+}
+
+.list-albums{
+    margin: 0.8em;
+}
+
+.index { 
+    margin-right: 1em;
+    font-style: bold;
+    font-size: large
+}
+
+.details {
+    margin-top: 1em;
+}
